@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Etch-a-Sketch</title>
+</head>
+<body>
+    
+    <div id="header">
+        <h2>Etch-a-Sketch</h2>
+    </div>
+
+    <div id="content">
+        <div id="main">
+            <div id="sketchBorder">
+                <div id="sketchArea"></div>
+            </div>
+        </div>
+        <div id="ctrl">
+            <button id="reset">Reset</button>
+            <div id="countDiv">
+                <label>Tile count (16-100):</label>
+                <input type="number" min="16" max="100" value="16" id="countInput">
+                <button id="submitCount">Change</button>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">Copyright © Alec Shellberg 2024</footer>
+
+</body>
+</html>

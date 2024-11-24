@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: rgb(50,75,75);
+}
+
+#header {
+    display: flex;
+    min-height: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+#header h2 {
+    background-color: rgb(255, 220, 220, .8);
+    border: 3px solid rgb(255, 220, 220, .2);
+    border-radius: 60px;
+    padding: 10px;
+}
+
+#content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 800px;
+}
+
+#ctrl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    margin-top: 20px;
+    gap: 10%;
+}
+
+#countInput {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: gray;
+}
+
+button {
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: gray;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    min-height: 700px;
+}
+
+#sketchBorder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 50px solid red;
+    border-radius: 40px;
+    width: 615px;
+    height: 615px;
+    margin-bottom: 50px;
+}
+
+#sketchArea {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    height: 600px;
+    width: 600px;
+    border: 15px solid black;
+    border-radius: 10px;
+}
+
+#footer {
+    display: flex;
+    min-height: 10%;
+    justify-content: center;
+    align-items: center;
+}
