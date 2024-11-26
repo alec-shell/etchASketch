@@ -1,16 +1,17 @@
 body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     height: 100vh;
     background-color: rgb(50,75,75);
+    color: white;
 }
 
 #header {
     display: flex;
-    min-height: 10%;
+    min-height: 80px;
     justify-content: center;
     align-items: center;
+    margin-top: -10px;
 }
 
 #header h2 {
@@ -22,6 +23,8 @@ body {
 
 #content {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex: 1;
     flex-direction: column;
     min-height: 800px;
@@ -29,18 +32,21 @@ body {
 
 #ctrl {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     height: 20%;
     margin-top: 20px;
     gap: 10%;
+    padding-left: 100px;
+}
+
+#countLabel {
+    font-weight: bold; 
+    font-size: 18px;
 }
 
 #countInput {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: gray;
+    width: 200px;
 }
 
 button {
@@ -50,6 +56,15 @@ button {
     border: none;
     border-radius: 5px;
     background-color: gray;
+}
+
+button:hover {
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(115, 115, 115, 0.658);
 }
 
 #main {
@@ -62,11 +77,12 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 50px solid red;
+    border: 50px solid rgba(200, 0, 255, 0.555);
     border-radius: 40px;
     width: 615px;
     height: 615px;
     margin-bottom: 50px;
+    padding: 0px;
 }
 
 #sketchArea {
@@ -75,8 +91,13 @@ button {
     background-color: white;
     height: 600px;
     width: 600px;
-    border: 15px solid black;
-    border-radius: 10px;
+    margin: 0px;
+}
+
+#sketchArea div { 
+    margin: 0; 
+    padding: 0; 
+    flex: 1;
 }
 
 #footer {
@@ -84,4 +105,6 @@ button {
     min-height: 10%;
     justify-content: center;
     align-items: center;
+    background-color: gray;
+    border-radius: 10px;
 }
