@@ -2,7 +2,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-color: rgb(50,75,75);
+    background-color: rgb(28, 179, 179);
     color: white;
 }
 
@@ -77,10 +77,10 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 50px solid rgba(200, 0, 255, 0.555);
+    border: 50px solid rgba(200, 0, 255, 0.25);
     border-radius: 40px;
-    width: 610px;
-    height: 610px;
+    width: 601px;
+    height: 600px;
     margin-bottom: 50px;
     padding: 0px;
 }
@@ -90,7 +90,7 @@ button:hover {
     flex-wrap: wrap;
     background-color: white;
     height: 600px;
-    width: 600px;
+    width: 601px;
     margin: 0px;
     padding: 0px;
 }

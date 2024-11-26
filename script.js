@@ -3,16 +3,17 @@ const countInput = document.querySelector("#countInput");
 const reset = document.querySelector("#reset");
 const grayscale = document.querySelector("#grayscale");
 const randColor = document.querySelector("#randColor");
-const initFill = 256;
+const initFill = 9801;  //1369
 let currentFill = 256;
 let color = false;
+const borderPixelCount = 600;
 
 fillSketchArea(initFill);
 
 countInput.addEventListener("input", (e) => fillSketchArea(e.target.value**2));
-reset.addEventListener("click", () => fillSketchArea(currrentFill));
+reset.addEventListener("click", () => fillSketchArea(currentFill));
 grayscale.addEventListener("click", function() {
-    color = false;
+    color = false;f
 });
 randColor.addEventListener("click", function() {
     color = true;
@@ -21,16 +22,18 @@ randColor.addEventListener("click", function() {
 
 function fillSketchArea(count) {
 
+    let side = (borderPixelCount**2 / count)**0.5;
+    side = side.toFixed(2);
     sketchArea.textContent = "";
+    
     for (let i = 0; i < count; i++) {
         let cell = document.createElement("div");
-        let side = (600**2 / count)**0.5;
-        side = side.toFixed(2);
-        cell.setAttribute("style", `min-width: ${side}px; min-height: ${side}px; max-width: ${side}px; max-height: ${side}px;`);
+        cell.setAttribute("style", `min-width: ${side}px; min-height: ${side}px;`);
         cell.addEventListener("mouseover", (e) => selectOutputColor(e.target));
         sketchArea.appendChild(cell);
-        currentFill = count;
     };
+
+    currentFill = count;
 };
 
 
