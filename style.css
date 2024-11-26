@@ -37,7 +37,7 @@ body {
     height: 20%;
     margin-top: 20px;
     gap: 10%;
-    padding-left: 100px;
+    padding-left: 0;
 }
 
 #countLabel {
@@ -79,8 +79,8 @@ button:hover {
     align-items: center;
     border: 50px solid rgba(200, 0, 255, 0.555);
     border-radius: 40px;
-    width: 615px;
-    height: 615px;
+    width: 610px;
+    height: 610px;
     margin-bottom: 50px;
     padding: 0px;
 }
@@ -92,12 +92,12 @@ button:hover {
     height: 600px;
     width: 600px;
     margin: 0px;
+    padding: 0px;
 }
 
 #sketchArea div { 
-    margin: 0; 
-    padding: 0; 
-    flex: 1;
+    margin: 0px; 
+    padding: 0px;
 }
 
 #footer {
