@@ -3,7 +3,7 @@ const countInput = document.querySelector("#countInput");
 const reset = document.querySelector("#reset");
 const grayscale = document.querySelector("#grayscale");
 const randColor = document.querySelector("#randColor");
-const initFill = 9801;  //1369
+const initFill = 256;
 let currentFill = 256;
 let color = false;
 const borderPixelCount = 600;
@@ -29,6 +29,7 @@ function fillSketchArea(count) {
     for (let i = 0; i < count; i++) {
         let cell = document.createElement("div");
         cell.setAttribute("style", `min-width: ${side}px; min-height: ${side}px;`);
+        cell.setAttribute("value", .25);
         cell.addEventListener("mouseover", (e) => selectOutputColor(e.target));
         sketchArea.appendChild(cell);
     };
@@ -39,7 +40,9 @@ function fillSketchArea(count) {
 
 function selectOutputColor(element) {
     if (!color) {
-        element.style.backgroundColor = "black";
+        let opacity = element.getAttribute("value");
+        element.style.backgroundColor = `rgba(0,0,0,${opacity}`;
+        element.setAttribute("value", Number(opacity) + .25);
     }
     else {
         element.style.backgroundColor = generateRandColor();
